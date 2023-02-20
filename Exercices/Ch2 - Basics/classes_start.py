@@ -33,6 +33,7 @@ class Vehicle():
 # Two subclasses, which both inherit from the vehicle and have their own properties
 class Car(Vehicle):                     # Vehicle - superclass of a class Car
     def __init__(self, enginetype):
+        # the purpose of the super() function is to access methods and properties within the parent class of the class where super() is being called from
         super().__init__("Car")         # initialize bodystyle property in the superclass (parent class)
         self.wheels = 4
         self.doors = 4

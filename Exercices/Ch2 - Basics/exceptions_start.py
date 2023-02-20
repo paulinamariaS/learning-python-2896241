@@ -5,10 +5,25 @@
 
 # Errors can happen in programs, and we need a clean way to handle them
 # TODO: This code will cause an error because you can't divide by zero:
+#x = 10/0
 
 # TODO: Exceptions provide a way of catching errors and then handling them in 
 # a separate section of the code to group them together
-
+# try: 
+#     x = 10/0
+# except: # if anything goes wrong the program flow immediately goes to exception here
+#     print("Well that didnt work!")
 
 # TODO: You can also catch specific exceptions
-
+try:
+    answer = input("What should I divide 10 by?")
+    num = int(answer)
+    print(10/num)
+except ZeroDivisionError as e:
+    print("You cant divide by zero!")
+except ValueError as e:
+    print("You didnt give me a valid number")
+    print(e)
+    # the code which will always execute regardless of what error will occur:
+finally:
+    print("This code always run")

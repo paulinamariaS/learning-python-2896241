@@ -35,5 +35,6 @@ def main():
             result = -1
     print(result)
 
+# below: it executes the main() function only if this file is executed as the main program
 if __name__ == "__main__":
     main()

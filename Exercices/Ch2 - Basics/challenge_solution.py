@@ -5,6 +5,7 @@
 def is_palindrome(teststr):
     # use the slice trick to reverse the string
     if teststr == teststr[::-1]:
+
         return True
     return False
 
@@ -23,7 +24,12 @@ while (run):
     # strip all the spaces and punctuation from the string
     newstr = ""
     for x in teststr:
-        if x.isalnum():
+        if x.isalnum():     # checks if contains either alphabet or number
             newstr += x
 
+    print(newstr)
     print("Palindrome test:", is_palindrome(newstr))
+
+
+# isalnum() method checks if all the characters of string are alphanumeric or not
+# It doesnt take any parameters
